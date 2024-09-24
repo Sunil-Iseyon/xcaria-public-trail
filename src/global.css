@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+
+}
+
+/* COLORS */
+
+:root {
+
+   /* Cyan colors */
+  --cyan-color: #00FFFF;       /* Primary Cyan */
+  --cyan-dark: #00B8B8;        /* Darker Cyan */
+  --cyan-light: #66FFFF;       /* Lighter Cyan */
+  --cyan-faded: rgba(0, 255, 255, 0.5); /* Faded Cyan (50% opacity) */
+  --cyan-muted: #99cccc;       /* Muted Cyan */
+  --cyan-hover: #33cccc;       /* Cyan for hover states */
+
+  /* White colors */
+  --white-color: #FFFFFF;        /* Pure White */
+  --white-faded: rgba(255, 255, 255, 0.8); /* Slightly Faded White (80% opacity) */
+  --white-faded-light: rgba(255, 255, 255, 0.5); /* Lighter Faded White (50% opacity) */
+  --white-faded-dark: rgba(255, 255, 255, 0.3);  /* Darker Faded White (30% opacity) */
+  --white-muted: #F0F0F0;        /* Muted White (Soft grayish white) */
+}
+
+
+
+/*  BACKGROUND :- 
+
+in layer file u have to give -
+
+       <div className="container mx-auto">
+            <div className="background">
+                <div className="background-effect">
+
+                </div>
+                {children}
+            </div>
+        </div> 
+
+
+
+*/
+
+.background {
+  line-height: 1.625;
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity)) /* #e2e8f0 */;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 234 212 / var(--tw-bg-opacity)) /* #5eead4 */;
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 234 212 / var(--tw-bg-opacity)) /* #5eead4 */;
+  --tw-text-opacity: 1;
+  color: rgb(19 78 74 / var(--tw-text-opacity)) /* #134e4a */;
+  --tw-text-opacity: 1;
+  color: rgb(19 78 74 / var(--tw-text-opacity)) /* #134e4a */;
+}
+.background-effect {
+  z-index: -10;
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 6 23 / var(--tw-bg-opacity)) /* #020617 */;
+  position: fixed;
+  inset: 0px;
+  background-image: radial-gradient(
+    circle 500px at 50% 200px,
+    #034a4391,
+    transparent
+  );
+}
+
+/* -----*********---- */
+
+/* TEXT-EFFECTS */
+
+/* GLOWING TEXT */
+
+.glowing-text {
+  z-index: 10;
+  font-size: 2.8rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #06b6d4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #15803d var(--tw-gradient-to-position);
+  font-weight: 700;
+  cursor: default;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+@media (min-width: 640px) {
+  .glowing-text {
+    font-size: 2.25rem /* 36px */;
+    line-height: 2.5rem /* 40px */;
+  }
+}
+@media (min-width: 768px) {
+  .glowing-text {
+    font-size: 4.5rem /* 72px */;
+    line-height: 1;
+  }
+}
+
+/* --------- */
+
+/* MOVING TEXT */
+
+.moving-text {
+  margin-top: 1rem /* 16px */;
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+  --tw-text-opacity: 1;
+  color: rgb(212 212 216 / var(--tw-text-opacity)) /* #d4d4d8 */;
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* STROKE TEXT */
+
+.stroke-text {
+  font-size: 9rem;
+  -webkit-text-stroke-width: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-text-stroke-color: rgb(7, 201, 255);
+  color: transparent;
+  font-weight: 600;
+}
+
+
+/* --------- */
+
+/* TITLES :- */
+
+.title {
+  font-size: 4rem /* 72px */;
+  line-height: 1;
+  color: white;
+}
+.sub-title {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: rgb(225, 225, 225);
+}
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: rgb(178, 178, 178);
+}
+
+/* --------- */
+
+/* BUTTONS :- */
+
+/* SOLID BUTTON */
+
+.solid-button{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #06b6d4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #15803d var(--tw-gradient-to-position);
+  border-radius: 0.375rem /* 6px */;
+  padding-left: 1rem /* 16px */;
+  padding-right: 1rem /* 16px */;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem /* 8px */;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) /* #ffffff */;
+  margin-bottom: 0.5rem /* 8px */;
+}
+.solid-button:hover{
+  --tw-gradient-from: #0891b2 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(8 145 178 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #166534 var(--tw-gradient-to-position);
+}
+
+/* GLOWING BUTTON */
+
+.glowing-button{
+     
+  background-image: conic-gradient(rgb(7, 201, 255), rgb(0, 69, 103), rgb(0, 85, 128), rgb(4, 65, 69), rgb(2, 73, 95));
+  height: 50px;
+  width: 120px;
+  
+  outline: 0;
+  border: 0;
+  color: white;
+  border-radius: 15px;
+  font-weight: 600;
+
+}
+.glowing-button:hover{
+  background-image: conic-gradient(rgb(1, 36, 46), rgb(0, 74, 103), rgb(3, 62, 78), rgb(2, 31, 45), rgb(24, 153, 151));
+
+}
+
+
+/* --------- */
+
+/* CARDS */
+
+/* GLOWING CARDS */
+
+.glowing-card{
+  position: relative;
+  width: 300px;
+  height: 230px;
+  background: rgba(255, 255, 255, 0.051);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 10px;
+  
+  border: solid 1.5px rgba(255, 255, 255,0.378);
+}
+.glowing-card::before{
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%,-50%);
+  background: radial-gradient(rgba(0, 255, 229, 0.277),transparent,transparent);
+  width: 700px;
+  height: 700px;
+  
+  
+  opacity: 0.5s,top 0s,left 0s;
+
+
+}
+.glowing-card:hover::before{
+  opacity: 1;
+  
+}
+.glowing-card::after{
+
+  content: '';
+  position: absolute;
+  inset:2px ;
+  border-radius: 18px;
+  background: rgba(45,45,45,.75);
+  z-index: -1;
+
+}
+
+/* --------- */
+
+/* INPUT section */
+
+
+.input{
+  outline: 0;
+  border: 0;
+  height: 50px;
+  padding-left: 20px;
+  background-color: transparent;
+  width: 400px;
+  border: solid 2px rgba(116, 116, 116, 0.466);
+  border-radius: 23px;
+}
+.input:hover{
+  border: solid 2px rgb(7, 201, 255);
+}
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+.form-control label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #a7c7c3;
+}
+.form-control input,
+.form-control textarea {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color:transparent;
+  border:1px solid #043731;
+  color: #e7eeec;
+}
+.form-actions button {
+  font: inherit;
+  font-weight:600;
+  padding: 0.5rem 2rem;
+  /* border: 1px solid white; */
+  border-radius: 40px;
+  background: radial-gradient(rgb(7, 238, 199),rgb(15, 16, 16));
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  
+}
+
+.form-actions button:hover {
+  background: radial-gradient(rgb(15, 16, 16),rgb(7, 238, 199))  ;
+  color:white;
+}
+
+.form-actions button[type='reset'] {
+  background-color: transparent;
+}
+
+.form-actions button[type='reset']:hover {
+  color: #99e2d9;
+}
+
+/* aboutus page  */
+
+.team{
+  display: flex;
+  /* justify-content: space-between; */
+  padding-left: 7rem;
+    padding-right: 7rem ;
+    margin-top: 2.75rem;
+}
+.info{
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(to right,  #083344, #020617);
+}
+

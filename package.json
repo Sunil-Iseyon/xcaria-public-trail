@@ -1,0 +1,72 @@
+{
+  "name": "xcaria.com",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.22.11",
+    "@emailjs/browser": "^4.3.3",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/font": "latest",
+    "@supabase/ssr": "^0.3.0",
+    "@supabase/supabase-js": "^2.43.5",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.5.0",
+    "clsx": "^2.1.1",
+    "contentful": "^10.15.0",
+    "framer-motion": "^10.18.0",
+    "geist": "^1.2.1",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.284.0",
+    "markdown-to-jsx": "^7.4.7",
+    "markdown-wasm": "^1.2.0",
+    "next": "latest",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.2.1",
+    "react-wrap-balancer": "^1.1.1",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.10.2",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "3.0.1",
+    "tailwind-merge": "^2.4.0",
+    "typescript": "^5.4.5",
+    "vercel": "^37.3.0"
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "1.4.1",
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^20.14.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "encoding": "^0.1.13",
+    "postcss": "^8.4.38",
+    "postcss-nesting": "^12.1.5",
+    "rome": "^12.1.3",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-debug-screens": "^2.2.1",
+    "typescript": "^5.4.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@opentelemetry/api": "1.4.1",
+      "@opentelemetry/core": "1.13.0",
+      "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
+      "@opentelemetry/resources": "1.13.0",
+      "@opentelemetry/sdk-trace-base": "1.13.0",
+      "@opentelemetry/sdk-trace-node": "1.13.0",
+      "@opentelemetry/semantic-conventions": "1.13.0"
+    }
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
+}

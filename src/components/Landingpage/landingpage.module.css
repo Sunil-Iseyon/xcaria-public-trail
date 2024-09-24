@@ -1,0 +1,161 @@
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(3, 3, 21);
+    padding: 10px 20px;
+}
+.light{
+    height: 350px;
+    width: 350px;
+    background:linear-gradient(to left,rgba(100, 209, 255, 1),rgba(177, 14, 218, 1));
+    filter: blur(100px);
+    position: absolute;
+    right: 15%;
+    top: 30%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  
+    
+}
+@keyframes pulse {
+    50% {
+      opacity: 0.4;
+    }
+  }
+.glassBg{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.095);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    border: solid 1.5px rgba(255, 255, 255, 0.432);
+    position: relative;
+    
+}
+.gridContainer {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 620px;
+    height: 580px;
+    right: 4.5%;
+    top: 15%;
+    
+
+    /* gap: 1px; */
+}
+
+.gridContainer div {
+    background-color: transparent; /* Same as background, keeping focus on lines */
+    border: 1px solid rgba(255, 192, 203, 0.237); /* Pink color for the grid lines */
+}
+.aiRobot{
+    position: absolute;
+    right: 7%;
+    top: 24%;
+    height: 520px;
+    width:550px ;
+    
+}
+.heroTitle{
+  
+
+    width: 40%;
+    position: relative;
+    top: 150px;
+    
+    margin-left: 7%
+}
+.heroTitle h3{
+    font-size: 1.8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: whitesmoke;
+    margin-top: 50px;
+    
+}
+.heroTitle h1{
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: transparent;
+    letter-spacing: 1.2px;
+    text-wrap: wrap;
+    background:linear-gradient(to left,rgb(25, 255, 247),rgba(177, 14, 218, 1));
+    -webkit-background-clip: text;
+
+}
+.heroTitle p{
+    color: rgba(167, 167, 167, 0.696);
+    margin-top: 10px;
+}
+.btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.solidBtn{
+    background: linear-gradient(rgb(25, 255, 247),rgba(177, 14, 218, 1));
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: 0;
+    border: none;
+    transition:all  ease 0.5s;
+}
+.solidBtn:hover{
+    outline: 0;
+    background: transparent;
+    border: solid 2px rgb(14, 164, 218);
+}
+.strokeBtn{
+    border: solid 2px rgba(177, 14, 218, 1);
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all ease .8s;
+}
+.strokeBtn:hover{
+    
+    border:solid 2px rgb(25, 255, 247);
+
+
+    
+}
+.hexagonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+.hexagon{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border: 2px solid #d099de86; /* Light blue border */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.hexagon .img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+

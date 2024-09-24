@@ -1,0 +1,91 @@
+.footer{
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+    gap:25px;
+    
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
+
+}
+.footer>div{
+    height: 50px;
+    
+    width: 180px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+   
+   
+}
+
+.footer>div>ul{
+   
+   margin-top: 30px;
+   display: flex;
+   /* align-items: center; */
+   justify-content: center;
+   flex-direction: column;
+}
+.footerLogo{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.footer>div>ul>.link>li{
+   
+    color: rgb(183, 183, 181);
+    gap: 10px;
+ }
+ .footer>div>ul>.link>li:hover{
+   
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+ }
+.inputs{
+    margin-left: 60px;
+}
+
+ .inputs>div{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 35px;
+    border: solid 2px rgba(0, 255, 255, 0.695);
+    padding: 5px;
+    margin-top: 20px;
+
+ 
+
+}
+ 
+ .inputs>div>input{
+    width: 70%;
+    padding-left: 10px;
+    height: 100%;
+    background: transparent;
+    outline: 0;
+   
+    
+    
+   
+
+
+}
+.inputs>div>button{
+    height: 100%;
+    width: 30%;
+    border: 0;
+    outline: 0;
+    background: linear-gradient(rgb(6, 68, 156),rgb(86, 97, 255));
+ 
+    border-radius: 35px;
+
+
+}
